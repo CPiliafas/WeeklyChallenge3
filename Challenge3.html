@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color:darkslateblue;
+            position:absolute;
+            font-size: 38px;
+            font-family: Garamond, serif;}
+        h1 {
+            color:white;
+            margin-left:30px;
+            align-content:center;}
+        label {
+            display: inline-block;
+            text-align: right;}
+        div {
+            margin-bottom: 10px;}
+    </style>
+    <script>
+        function validateForm() {
+            let x = document.forms["MyForm"]["name"].value;
+            if (x == "") {
+                alert("Name must be filled out.");
+            return false;}
+            
+            let y = document.getElement("fave_genre").required;
+            if (y == NULL) {
+                alert("Genre must be selected.");
+            return false;}
+}
+    </script>
+</head>
+    
+<body>
+<title>Christos Piliafas Weekly Challenge 3</title>
+
+<h1>My Form</h1>
+
+<form name="MyForm" onsubmit="return validateForm()">
+    <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br>
+    </div>
+    
+    <div>
+    <label for="fave_genre">Choose a Favorite Music Genre:</label><br>
+    <input type="radio" id="pop" name="fave_genre" value="Pop" required>
+    <label for="pop">Pop</label><br>
+    <input type="radio" id="rock" name="fave_genre" value="Rock">
+    <label for="rock">Rock</label><br>
+    <input type="radio" id="hip-hop" name="fave_genre" value="Hip-Hop">
+    <label for="hip-hop">Hip-Hop</label><br>
+    <input type="radio" id="metal" name="fave_genre" value="Metal">
+    <label for="Metal">Metal</label><br>
+    </div>
+    
+    <div>
+    <label for="drink">Choose a drink:</label>
+    <select id="drink" name="drinks" size="4" required>
+        <option value="diet-coke">Diet Coke</option>
+        <option value="tea">Iced Tea</option>
+        <option value="cider">Apple Cider</option>
+        <option value="coffee">Coffee</option>
+    </select>
+    </div>
+    <input type="submit" value="Submit">
+</form>
+    </body>
+</html>
